@@ -17,4 +17,4 @@ Our application is a card game where a human player plays against the computer. 
 ### As a player, i want to be able to save my game so that i can continue it later (Nicolas Schneider)
 ### As a player, i want to load a save game, so that i can continue my previous game (Nicolas Schneider)
 ### As a player, i want my game to be saved automatically when i exist, so that i do not lose my progress (Nicolas Schneider)
-### As a player, I want to view the game statistics, so that I can see how often the human player and the computer have won (Nicolas Schneider)
+### As a player, I want to view the game statistics, so that I can see how often the human player and the computer have won (Nicolas Schneider, Thasika Sivaramlingam, Subidsha Yoharajah)
