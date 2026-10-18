@@ -9,21 +9,21 @@ Our application is a card game where a human player plays against the computer. 
 - Subidsha Yoharajah
   
 ## UNO Rules
-	1. The game is played between one human player and one computer opponent using four colours: red, blue, green and yellow.
-	2. The human player begind the game.
-	3. The deck contains number cards from 0 to 9, Block (Skip) cards, +2 cards and colour-change (Wild) cards. Reverse and +4 cards are excluded to keep the game simple.
-	4. Each player receives seven cards at the beginning of the game.
-	5. A player can play a card if its colour matches teh colour of the top card on the discard pile.
-	6. A player can play a card if its number matches the number of the top card on the discard pile.
-	7. A player can play a card if its symbol matches the symbol of the top card on the discard pile. Action symbols include Skip, Draw Two (+2)
-	8. A player can play a Wild card regardless of the colour of the top card on the discard pile. The player must then choose the colour that the next player has to match.
-	9. Block cards skip the opponent's turn.
-	10. The +2 cards make the opponent draw two cards and lose their turn.
-	11. +2 and skip cards cannot be stacked.
-	12. If a player has no playable card, they draw one card. If it is playable, they may play it immediately. If not, then the next turn goes to the other player.
-	13. A player may only draw a card if he has no playable cards
-	14. The computer randomly plays a valid card or draws one if it cannot play.
-  15. The first player to get rid of all their cards wins the game.
+1. The game is played between one human player and one computer opponent using four colours: red, blue, green and yellow.
+2. The human player begind the game.
+3. The deck contains number cards from 0 to 9, Block (Skip) cards, +2 cards and colour-change (Wild) cards. Reverse and +4 cards are excluded to keep the game simple.
+4. Each player receives seven cards at the beginning of the game.
+5. A player can play a card if its colour matches teh colour of the top card on the discard pile.
+6. A player can play a card if its number matches the number of the top card on the discard pile.
+7. A player can play a card if its symbol matches the symbol of the top card on the discard pile. Action symbols include Skip, Draw Two (+2)
+8. A player can play a Wild card regardless of the colour of the top card on the discard pile. The player must then choose the colour that the next player has to match.
+9. Block cards skip the opponent's turn.
+10. The +2 cards make the opponent draw two cards and lose their turn.
+11. +2 and skip cards cannot be stacked.
+12. If a player has no playable card, they draw one card. If it is playable, they may play it immediately. If not, then the next turn goes to the other player.
+13. A player may only draw a card if he has no playable cards
+14. The computer randomly plays a valid card or draws one if it cannot play.
+15. The first player to get rid of all their cards wins the game.
       
 ## User Stories
 
