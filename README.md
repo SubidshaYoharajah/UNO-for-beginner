@@ -111,5 +111,3 @@ Acceptance criteria:
 - Each game result is counted only once
 - The statistics stay saved after the application is cloed an restarted
 - If a game hasn’t been completed, it doesn’t count towards the statistics
-  
-### As a player, I want to view the game statistics, so that I can see how often the human player and the computer have won (Nicolas Schneider, Thasika Sivaramlingam, Subidsha Yoharajah)
