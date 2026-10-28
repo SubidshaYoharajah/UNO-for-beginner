@@ -21,7 +21,7 @@ The UNO game allows all players to play against the computer whenever they want.
 4. Each player receives seven cards at the beginning of the game.
 5. A player can play a card if its colour or its number matches the top card on the discard pile.
 6. A player can play a card if its symbol matches the symbol of the top card on the discard pile. Action symbols include Skip, Draw Two (+2)
-7. When a player plays a Wild card, they must choose one of the four colours. The chosen colour becomes the active colour. The next player can play a card if its colour matches the active colour or if its number or action symbol matches the top card on the discard pile. Another Wild card can always be played, regardless of the active colour.
+7. When a player plays a Wild card, they must choose one of the four colours. The chosen colour becomes the active colour. The next player can only play a card that matches the chosen active colour or another Wild card. The card underneath the Wild card is ignored.
 8. Block cards skip the opponent's turn.
 9. The +2 cards make the opponent draw two cards and lose their turn.
 10. +2 and skip cards cannot be stacked.
