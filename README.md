@@ -59,11 +59,11 @@ As a player, I want to play a valid card from my hand, so that I can make a lega
 Acceptance criteria:
 - The player can select a card from their hand.
 - The game checks if the selected card can be played
-- A number card can be played if the colour and number matches the top card
+- A number card can be played if its colour matches the active colour or its number matches the number of the top card on the discard pile, provided the top card is a number card.
 - A invalid card cannot be played and stays in the players hand.
 - If the player dont have playable cards, they have to draw one card from the drwa pile
 - If the draw card is playable, the player have to play it immediatly
-- After a Wild card is played, a number card is valid if its colour matches the chosen active colour OR its number matches the number of the Wild card's preceding top card.
+- 	When a Wild card is the top card on the discard pile, a number card is valid only if its colour matches the chosen active colour.
   
 ### US-04: Play Action & Wild Card (Subidsha Yoharajah)
 As a player, I want to play a Action & Wild cards, so that I can use their special effects during the game
@@ -80,7 +80,7 @@ Acceptance criteria:
 - When a player plays a + 2 card, the next player drwas two cards and loses their turn
 - A player cannot stack another + 2 card on a + 2 card.
 - Skip and + 2 cards cannot be stacked to avoid their effect.
-- After a Wild card is played, an Action card (Skip or +2) is valid if its colour matches the chosen active colour OR its symbol matches the symbol of the top card on the discard pile.
+- 	When a Wild card is the top card on the discard pile, an action card (Skip or +2) is valid only if its colour matches the chosen active colour.
 
 ### US-05: Computer Player (Nicolas Schneider)
 As a player, I want the computer to play its turn automatically, so that I can play against the computer.
@@ -95,7 +95,7 @@ Acceptance criteria:
 - If the computer has no cards left, the game ends and the computer is the winner
   
 ### US-06: Save and Load Game (Nicolas Schneider)
-As a player, I want to save and load my game, so that I can continue playing later without losing my progress
+As a player, I want to save and load my game, so that I can continue playing later without losing my progress.
 Acceptance criteria:
 
 - The player can save a current game
@@ -105,7 +105,7 @@ Acceptance criteria:
 - If no save game exists, the game shows an error message when the player tries to load a game.
   
 ### US-07: Detect Winner (Subidsha Yoharajah)
-As a player, I want the game to detect when a player has no cards left, so that the game
+As a player, I want the game to detect when a player has no cards left, so that I know who has won the game.
 Acceptance criteria:
 - The games checks who has any cards left after playing a card
 - The game ends when a player has no card left
@@ -114,7 +114,7 @@ Acceptance criteria:
 - No turns can be played after the game ends.
   
 ### US-08: View Game Statistcs (Subidsha Yoharajah)
-As a player, I want to view the game statistics, so that I can see how often the human player and the computer have won
+As a player, I want to view the game statistics, so that I can see how often the human player and the computer have won.
 Acceptance criteria:
 - The game shows the total number of wins for the human player
 - The game shows the total number of wins for the computer
