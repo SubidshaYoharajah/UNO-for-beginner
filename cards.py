@@ -79,7 +79,9 @@ skip_green_2 = {"name": "Skip Green", "color": colors[2], "value": "Skip"}
 draw_two_green = {"name": "Draw Two Green", "color": colors[2], "value": "+2"}
 draw_two_green_2 = {"name": "Draw Two Green", "color": colors[2], "value": "+2"}
 
+
 # ---------------------- YELLOW CARDS (23) ----------------------
+zero_yellow = {"name": "Zero Yellow", "color": colors[3], "value": 0}   
 one_yellow = {"name": "One Yellow", "color": colors[3], "value": 1}
 one_yellow_2 = {"name": "One Yellow", "color": colors[3], "value": 1}
 two_yellow = {"name": "Two Yellow", "color": colors[3], "value": 2}
