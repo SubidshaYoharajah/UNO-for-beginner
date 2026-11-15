@@ -80,16 +80,6 @@ draw_two_green = {"name": "Draw Two Green", "color": colors[2], "value": "+2"}
 draw_two_green_2 = {"name": "Draw Two Green", "color": colors[2], "value": "+2"}
 
 # ---------------------- YELLOW CARDS (23) ----------------------
-zero_yellow = {"name": "Zero Yellow", "color": colors[3], "value": 0}
-one_yellow = {"name": "One Yellow", "color": colors[3], "value": 1}
-one_yellow_2 = {"name": "One Yellow", "color": colors[3], "value": 1}
-two_yellow = {"name": "Two Yellow", "color": colors[3], "value": 2}
-two_yellow_2 = {"name": "Two Yellow", "color": colors[3], "value": 2}
-three_yellow = {"name": "Three Yellow", "color": colors[3], "value": 3}
-three_yellow_2 = {"name": "Three Yellow", "color": colors[3], "value": 3}
-four_yellow = {"name": "Four Yellow", "color": colors[3], "value": 4}
-four_yellow_2 = {"name": "Four Yellow", "color": colors[3], "value": 4}
-zero_yellow = {"name": "Zero Yellow", "color": colors[3], "value": 0}
 one_yellow = {"name": "One Yellow", "color": colors[3], "value": 1}
 one_yellow_2 = {"name": "One Yellow", "color": colors[3], "value": 1}
 two_yellow = {"name": "Two Yellow", "color": colors[3], "value": 2}
