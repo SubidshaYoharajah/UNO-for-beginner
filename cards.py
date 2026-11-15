@@ -1,168 +1,91 @@
-# All colours
-COLORS = ["red", "blue", "green", "yellow"]
-
-# All number cards
-NUMBERS = ["0", "1", "2", "3", "4",
-           "5", "6", "7", "8", "9"]
-
-def create_deck:
-    deck = [
-
-        # =========================
-        # RED CARDS (23)
-        # =========================
-
-        {"color": "red", "value": "0"},
-
-        {"color": "red", "value": "1"},
-        {"color": "red", "value": "1"},
-
-        {"color": "red", "value": "2"},
-        {"color": "red", "value": "2"},
-
-        {"color": "red", "value": "3"},
-        {"color": "red", "value": "3"},
-
-        {"color": "red", "value": "4"},
-        {"color": "red", "value": "4"},
-
-        {"color": "red", "value": "5"},
-        {"color": "red", "value": "5"},
-
-        {"color": "red", "value": "6"},
-        {"color": "red", "value": "6"},
-
-        {"color": "red", "value": "7"},
-        {"color": "red", "value": "7"},
-
-        {"color": "red", "value": "8"},
-        {"color": "red", "value": "8"},
-
-        {"color": "red", "value": "9"},
-        {"color": "red", "value": "9"},
-
-        {"color": "red", "value": "Skip"},
-        {"color": "red", "value": "Skip"},
-
-        {"color": "red", "value": "+2"},
-        {"color": "red", "value": "+2"},
+colors = ["red", "blue", "green", "yellow", "black"]
+number_values = list(range(10))
+action_values = ["Skip", "+2"]
+wild_value = "Wild"
 
 
-        # =========================
-        # BLUE CARDS (23)
-        # =========================
+# ---------------------- RED CARDS (23) ----------------------
+zero_red = {"name": "Zero Red", "color": colors[0], "value": 0}
+one_red = {"name": "One Red", "color": colors[0], "value": 1}
+one_red_2 = {"name": "One Red", "color": colors[0], "value": 1}
+two_red = {"name": "Two Red", "color": colors[0], "value": 2}
+two_red_2 = {"name": "Two Red", "color": colors[0], "value": 2}
+three_red = {"name": "Three Red", "color": colors[0], "value": 3}
+three_red_2 = {"name": "Three Red", "color": colors[0], "value": 3}
+four_red = {"name": "Four Red", "color": colors[0], "value": 4}
+four_red_2 = {"name": "Four Red", "color": colors[0], "value": 4}
+five_red = {"name": "Five Red", "color": colors[0], "value": 5}
+five_red_2 = {"name": "Five Red", "color": colors[0], "value": 5}
+six_red = {"name": "Six Red", "color": colors[0], "value": 6}
+six_red_2 = {"name": "Six Red", "color": colors[0], "value": 6}
+seven_red = {"name": "Seven Red", "color": colors[0], "value": 7}
+seven_red_2 = {"name": "Seven Red", "color": colors[0], "value": 7}
+eight_red = {"name": "Eight Red", "color": colors[0], "value": 8}
+eight_red_2 = {"name": "Eight Red", "color": colors[0], "value": 8}
+nine_red = {"name": "Nine Red", "color": colors[0], "value": 9}
+nine_red_2 = {"name": "Nine Red", "color": colors[0], "value": 9}
+skip_red = {"name": "Skip Red", "color": colors[0], "value": "Skip"}
+skip_red_2 = {"name": "Skip Red", "color": colors[0], "value": "Skip"}
+draw_two_red = {"name": "Draw Two Red", "color": colors[0], "value": "+2"}
+draw_two_red_2 = {"name": "Draw Two Red", "color": colors[0], "value": "+2"}
 
-        {"color": "blue", "value": "0"},
+# ---------------------- BLUE CARDS (23) ----------------------
+zero_blue = {"name": "Zero Blue", "color": colors[1], "value": 0}
+one_blue = {"name": "One Blue", "color": colors[1], "value": 1}
+one_blue_2 = {"name": "One Blue", "color": colors[1], "value": 1}
+two_blue = {"name": "Two Blue", "color": colors[1], "value": 2}
+two_blue_2 = {"name": "Two Blue", "color": colors[1], "value": 2}
+three_blue = {"name": "Three Blue", "color": colors[1], "value": 3}
+three_blue_2 = {"name": "Three Blue", "color": colors[1], "value": 3}
+four_blue = {"name": "Four Blue", "color": colors[1], "value": 4}
+four_blue_2 = {"name": "Four Blue", "color": colors[1], "value": 4}
+five_blue = {"name": "Five Blue", "color": colors[1], "value": 5}
+five_blue_2 = {"name": "Five Blue", "color": colors[1], "value": 5}
+six_blue = {"name": "Six Blue", "color": colors[1], "value": 6}
+six_blue_2 = {"name": "Six Blue", "color": colors[1], "value": 6}
+seven_blue = {"name": "Seven Blue", "color": colors[1], "value": 7}
+seven_blue_2 = {"name": "Seven Blue", "color": colors[1], "value": 7}
+eight_blue = {"name": "Eight Blue", "color": colors[1], "value": 8}
+eight_blue_2 = {"name": "Eight Blue", "color": colors[1], "value": 8}
+nine_blue = {"name": "Nine Blue", "color": colors[1], "value": 9}
+nine_blue_2 = {"name": "Nine Blue", "color": colors[1], "value": 9}
+skip_blue = {"name": "Skip Blue", "color": colors[1], "value": "Skip"}
+skip_blue_2 = {"name": "Skip Blue", "color": colors[1], "value": "Skip"}
+draw_two_blue = {"name": "Draw Two Blue", "color": colors[1], "value": "+2"}
+draw_two_blue_2 = {"name": "Draw Two Blue", "color": colors[1], "value": "+2"}
 
-        {"color": "blue", "value": "1"},
-        {"color": "blue", "value": "1"},
+# ---------------------- GREEN CARDS (23) ----------------------
+zero_green = {"name": "Zero Green", "color": colors[2], "value": 0}
+one_green = {"name": "One Green", "color": colors[2], "value": 1}
+one_green_2 = {"name": "One Green", "color": colors[2], "value": 1}
+two_green = {"name": "Two Green", "color": colors[2], "value": 2}
+two_green_2 = {"name": "Two Green", "color": colors[2], "value": 2}
+three_green = {"name": "Three Green", "color": colors[2], "value": 3}
+three_green_2 = {"name": "Three Green", "color": colors[2], "value": 3}
+four_green = {"name": "Four Green", "color": colors[2], "value": 4}
+four_green_2 = {"name": "Four Green", "color": colors[2], "value": 4}
+five_green = {"name": "Five Green", "color": colors[2], "value": 5}
+five_green_2 = {"name": "Five Green", "color": colors[2], "value": 5}
+six_green = {"name": "Six Green", "color": colors[2], "value": 6}
+six_green_2 = {"name": "Six Green", "color": colors[2], "value": 6}
+seven_green = {"name": "Seven Green", "color": colors[2], "value": 7}
+seven_green_2 = {"name": "Seven Green", "color": colors[2], "value": 7}
+eight_green = {"name": "Eight Green", "color": colors[2], "value": 8}
+eight_green_2 = {"name": "Eight Green", "color": colors[2], "value": 8}
+nine_green = {"name": "Nine Green", "color": colors[2], "value": 9}
+nine_green_2 = {"name": "Nine Green", "color": colors[2], "value": 9}
+skip_green = {"name": "Skip Green", "color": colors[2], "value": "Skip"}
+skip_green_2 = {"name": "Skip Green", "color": colors[2], "value": "Skip"}
+draw_two_green = {"name": "Draw Two Green", "color": colors[2], "value": "+2"}
+draw_two_green_2 = {"name": "Draw Two Green", "color": colors[2], "value": "+2"}
 
-        {"color": "blue", "value": "2"},
-        {"color": "blue", "value": "2"},
-
-        {"color": "blue", "value": "3"},
-        {"color": "blue", "value": "3"},
-
-        {"color": "blue", "value": "4"},
-        {"color": "blue", "value": "4"},
-
-        {"color": "blue", "value": "5"},
-        {"color": "blue", "value": "5"},
-
-        {"color": "blue", "value": "6"},
-        {"color": "blue", "value": "6"},
-
-        {"color": "blue", "value": "7"},
-        {"color": "blue", "value": "7"},
-
-        {"color": "blue", "value": "8"},
-        {"color": "blue", "value": "8"},
-
-        {"color": "blue", "value": "9"},
-        {"color": "blue", "value": "9"},
-
-        {"color": "blue", "value": "Skip"},
-        {"color": "blue", "value": "Skip"},
-
-        {"color": "blue", "value": "+2"},
-        {"color": "blue", "value": "+2"},
-
-
-        # =========================
-        # GREEN CARDS (23)
-        # =========================
-
-        {"color": "green", "value": "0"},
-
-        {"color": "green", "value": "1"},
-        {"color": "green", "value": "1"},
-
-        {"color": "green", "value": "2"},
-        {"color": "green", "value": "2"},
-
-        {"color": "green", "value": "3"},
-        {"color": "green", "value": "3"},
-
-        {"color": "green", "value": "4"},
-        {"color": "green", "value": "4"},
-
-        {"color": "green", "value": "5"},
-        {"color": "green", "value": "5"},
-
-        {"color": "green", "value": "6"},
-        {"color": "green", "value": "6"},
-
-        {"color": "green", "value": "7"},
-        {"color": "green", "value": "7"},
-
-        {"color": "green", "value": "8"},
-        {"color": "green", "value": "8"},
-
-        {"color": "green", "value": "9"},
-        {"color": "green", "value": "9"},
-
-        {"color": "green", "value": "Skip"},
-        {"color": "green", "value": "Skip"},
-
-        {"color": "green", "value": "+2"},
-        {"color": "green", "value": "+2"},
-
-
-        # =========================
-        # YELLOW CARDS (23)
-        # =========================
-
-        {"color": "yellow", "value": "0"},
-
-        {"color": "yellow", "value": "1"},
-        {"color": "yellow", "value": "1"},
-
-        {"color": "yellow", "value": "2"},
-        {"color": "yellow", "value": "2"},
-
-        {"color": "yellow", "value": "3"},
-        {"color": "yellow", "value": "3"},
-
-        {"color": "yellow", "value": "4"},
-        {"color": "yellow", "value": "4"},
-
-        {"color": "yellow", "value": "5"},
-        {"color": "yellow", "value": "5"},
-
-        {"color": "yellow", "value": "6"},
-        {"color": "yellow", "value": "6"},
-
-        {"color": "yellow", "value": "7"},
-        {"color": "yellow", "value": "7"},
-
-        {"color": "yellow", "value": "8"},
-        {"color": "yellow", "value": "8"},
-
-        {"color": "yellow", "value": "9"},
-        {"color": "yellow", "value": "9"},
-
-        {"color": "yellow", "value": "Skip"},
-        {"color": "yellow", "value": "Skip"},
-
-        {"color": "yellow", "value": "+2"},
-        {"color": "yellow", "value": "+2"},
+# ---------------------- YELLOW CARDS (23) ----------------------
+zero_yellow = {"name": "Zero Yellow", "color": colors[3], "value": 0}
+one_yellow = {"name": "One Yellow", "color": colors[3], "value": 1}
+one_yellow_2 = {"name": "One Yellow", "color": colors[3], "value": 1}
+two_yellow = {"name": "Two Yellow", "color": colors[3], "value": 2}
+two_yellow_2 = {"name": "Two Yellow", "color": colors[3], "value": 2}
+three_yellow = {"name": "Three Yellow", "color": colors[3], "value": 3}
+three_yellow_2 = {"name": "Three Yellow", "color": colors[3], "value": 3}
+four_yellow = {"name": "Four Yellow", "color": colors[3], "value": 4}
+four_yellow_2 = {"name": "Four Yellow", "color": colors[3], "value": 4}
