@@ -1,7 +1,161 @@
+def create_deck:
+    deck = [
+
+        # =========================
+        # RED CARDS (23)
+        # =========================
+
+        {"color": "red", "value": "0"},
+
+        {"color": "red", "value": "1"},
+        {"color": "red", "value": "1"},
+
+        {"color": "red", "value": "2"},
+        {"color": "red", "value": "2"},
+
+        {"color": "red", "value": "3"},
+        {"color": "red", "value": "3"},
+
+        {"color": "red", "value": "4"},
+        {"color": "red", "value": "4"},
+
+        {"color": "red", "value": "5"},
+        {"color": "red", "value": "5"},
+
+        {"color": "red", "value": "6"},
+        {"color": "red", "value": "6"},
+
+        {"color": "red", "value": "7"},
+        {"color": "red", "value": "7"},
+
+        {"color": "red", "value": "8"},
+        {"color": "red", "value": "8"},
+
+        {"color": "red", "value": "9"},
+        {"color": "red", "value": "9"},
+
+        {"color": "red", "value": "Skip"},
+        {"color": "red", "value": "Skip"},
+
+        {"color": "red", "value": "+2"},
+        {"color": "red", "value": "+2"},
 
 
-one_green = {
-    "name": "One Green",
-    "color": colors[2],
-    "value": 1
-} 
+        # =========================
+        # BLUE CARDS (23)
+        # =========================
+
+        {"color": "blue", "value": "0"},
+
+        {"color": "blue", "value": "1"},
+        {"color": "blue", "value": "1"},
+
+        {"color": "blue", "value": "2"},
+        {"color": "blue", "value": "2"},
+
+        {"color": "blue", "value": "3"},
+        {"color": "blue", "value": "3"},
+
+        {"color": "blue", "value": "4"},
+        {"color": "blue", "value": "4"},
+
+        {"color": "blue", "value": "5"},
+        {"color": "blue", "value": "5"},
+
+        {"color": "blue", "value": "6"},
+        {"color": "blue", "value": "6"},
+
+        {"color": "blue", "value": "7"},
+        {"color": "blue", "value": "7"},
+
+        {"color": "blue", "value": "8"},
+        {"color": "blue", "value": "8"},
+
+        {"color": "blue", "value": "9"},
+        {"color": "blue", "value": "9"},
+
+        {"color": "blue", "value": "Skip"},
+        {"color": "blue", "value": "Skip"},
+
+        {"color": "blue", "value": "+2"},
+        {"color": "blue", "value": "+2"},
+
+
+        # =========================
+        # GREEN CARDS (23)
+        # =========================
+
+        {"color": "green", "value": "0"},
+
+        {"color": "green", "value": "1"},
+        {"color": "green", "value": "1"},
+
+        {"color": "green", "value": "2"},
+        {"color": "green", "value": "2"},
+
+        {"color": "green", "value": "3"},
+        {"color": "green", "value": "3"},
+
+        {"color": "green", "value": "4"},
+        {"color": "green", "value": "4"},
+
+        {"color": "green", "value": "5"},
+        {"color": "green", "value": "5"},
+
+        {"color": "green", "value": "6"},
+        {"color": "green", "value": "6"},
+
+        {"color": "green", "value": "7"},
+        {"color": "green", "value": "7"},
+
+        {"color": "green", "value": "8"},
+        {"color": "green", "value": "8"},
+
+        {"color": "green", "value": "9"},
+        {"color": "green", "value": "9"},
+
+        {"color": "green", "value": "Skip"},
+        {"color": "green", "value": "Skip"},
+
+        {"color": "green", "value": "+2"},
+        {"color": "green", "value": "+2"},
+
+
+        # =========================
+        # YELLOW CARDS (23)
+        # =========================
+
+        {"color": "yellow", "value": "0"},
+
+        {"color": "yellow", "value": "1"},
+        {"color": "yellow", "value": "1"},
+
+        {"color": "yellow", "value": "2"},
+        {"color": "yellow", "value": "2"},
+
+        {"color": "yellow", "value": "3"},
+        {"color": "yellow", "value": "3"},
+
+        {"color": "yellow", "value": "4"},
+        {"color": "yellow", "value": "4"},
+
+        {"color": "yellow", "value": "5"},
+        {"color": "yellow", "value": "5"},
+
+        {"color": "yellow", "value": "6"},
+        {"color": "yellow", "value": "6"},
+
+        {"color": "yellow", "value": "7"},
+        {"color": "yellow", "value": "7"},
+
+        {"color": "yellow", "value": "8"},
+        {"color": "yellow", "value": "8"},
+
+        {"color": "yellow", "value": "9"},
+        {"color": "yellow", "value": "9"},
+
+        {"color": "yellow", "value": "Skip"},
+        {"color": "yellow", "value": "Skip"},
+
+        {"color": "yellow", "value": "+2"},
+        {"color": "yellow", "value": "+2"},
