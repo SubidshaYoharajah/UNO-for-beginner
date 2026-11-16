@@ -8,9 +8,9 @@ def main():
     
     # Example card to play
     card_to_play = {
-        "name": "Switch Color",
+        "name": "Wild",
         "color": cards.colors[-1],
-        "value": 0
+        "value": cards.wild_value
     }
     
     top_card = logic.play_card(card_to_play, top_card)
