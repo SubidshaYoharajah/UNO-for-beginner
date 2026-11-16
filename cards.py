@@ -107,3 +107,4 @@ draw_two_yellow_2 = {"name": "Draw Two Yellow", "color": colors[3], "value": "+2
 
 # ---------------------- WILD CARDS (8) ----------------------
 hallo 
+wazzaaaa
