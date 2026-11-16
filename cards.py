@@ -110,3 +110,33 @@ wild_1 = {"name": "Wild", "color": "black", "value": "Wild"}
 wild_2 = {"name": "Wild", "color": "black", "value": "Wild"}
 wild_3 = {"name": "Wild", "color": "black", "value": "Wild"}
 wild_4 = {"name": "Wild", "color": "black", "value": "Wild"}
+
+
+
+all_cards= [
+    zero_red, one_red, one_red_2, two_red, two_red_2,
+    three_red, three_red_2, four_red, four_red_2, five_red, five_red_2, six_red, six_red_2,
+    seven_red, seven_red_2, eight_red, eight_red_2,
+    nine_red, nine_red_2, skip_red, skip_red_2, draw_two_red, 
+    draw_two_red_2,
+
+    zero_blue, one_blue, one_blue_2, two_blue, two_blue_2,
+    three_blue, three_blue_2, four_blue, four_blue_2, five_blue,
+    five_blue_2, six_blue, six_blue_2,
+    seven_blue, seven_blue_2, eight_blue, eight_blue_2,
+    nine_blue, nine_blue_2, skip_blue, skip_blue_2, draw_two_blue, draw_two_blue_2,
+
+    zero_green, one_green, one_green_2, two_green, two_green_2,
+    three_green, three_green_2, four_green, four_green_2, five_green,
+    five_green_2, six_green, six_green_2,
+    seven_green, seven_green_2, eight_green, eight_green_2,
+    nine_green, nine_green_2, skip_green, skip_green_2, draw_two_green, draw_two_green_2,
+
+    zero_yellow, one_yellow, one_yellow_2, two_yellow, two_yellow_2,
+    three_yellow, three_yellow_2, four_yellow, four_yellow_2, five_yellow,
+    five_yellow_2, six_yellow, six_yellow_2,
+    seven_yellow, seven_yellow_2, eight_yellow, eight_yellow_2,
+    nine_yellow, nine_yellow_2, skip_yellow, skip_yellow_2, draw_two_yellow, draw_two_yellow_2,
+    
+    wild_1, wild_2, wild_3, wild_4
+]
