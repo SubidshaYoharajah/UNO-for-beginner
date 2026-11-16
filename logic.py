@@ -21,3 +21,4 @@ def play_card(card_top_play, top_card):
         return card_top_play  # Return the played card to update the top card
     else:
         print("Invalid play!")
+        return top_card
