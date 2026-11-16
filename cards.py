@@ -105,4 +105,4 @@ skip_yellow_2 = {"name": "Skip Yellow", "color": colors[3], "value": "Skip"}
 draw_two_yellow = {"name": "Draw Two Yellow", "color": colors[3], "value": "+2"}
 draw_two_yellow_2 = {"name": "Draw Two Yellow", "color": colors[3], "value": "+2"}
 
-# ---------------------- WILD CARDS (8) ----------------------
+# ---------------------- WILD CARDS (4) ----------------------
