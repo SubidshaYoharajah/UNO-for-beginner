@@ -1,2 +1,3 @@
 import cards
-print(len(all_cards))
+print(len(cards.all_cards))
+

@@ -1,3 +1,4 @@
+
 colors = ["red", "blue", "green", "yellow", "black"]
 number_values = list(range(10))
 action_values = ["Skip", "+2"]
