@@ -9,7 +9,7 @@ def choose_computer_color(computer_hand):
         hand_colors.append(card["color"])
 
     best_color = "red"
-    for color in cards.color[:4]:
+    for color in cards.colors[:4]:
         if hand_colors.count(color) > hand_colors.count(best_color):
             best_color = color
     
