@@ -1,6 +1,8 @@
 import cards
 import logic
 import save_load
+import computer
+import user_input
 
 def main():
     top_card = cards.one_green
