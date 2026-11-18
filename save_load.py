@@ -1,8 +1,8 @@
 import json
 
-def save_game(main):
+def save_game(game):
     with open("saved_game.json", "w") as file:
-        json.dump(main, file, indent=4)
+        json.dump(game, file, indent=4)
 
     print("Game saved successfully!")
 
