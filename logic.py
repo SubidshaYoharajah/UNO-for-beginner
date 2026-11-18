@@ -22,3 +22,11 @@ def play_card(card_top_play, top_card):
     else:
         print("Invalid play!")
         return top_card
+
+
+# Check Winner
+def check_winner(player_cards):
+    if len(player_cards) == 0:
+        return True
+    else:
+        return False
