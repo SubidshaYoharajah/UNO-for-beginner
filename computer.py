@@ -1,6 +1,7 @@
 import random
 import logic
 import cards
+import deck
 
 def choose_computer_color(computer_hand):
     hand_colors = []
