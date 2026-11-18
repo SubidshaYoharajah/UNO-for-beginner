@@ -12,6 +12,14 @@ for i in range(7):
     computer_hand.append(deck.pop())
 
 
+discard_pile =  [deck.pop()]
+current_player = "human"
+
+
 print(len(player_hand))
 print(len(computer_hand))
 print(len(deck))
+
+
+print(len(discard_pile))
+print(current_player)
