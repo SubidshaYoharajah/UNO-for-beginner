@@ -24,9 +24,33 @@ def play_card(card_top_play, top_card):
         return top_card
 
 
-# Check Winner
+# US 07: Detect Winner
+# Check if the player has no cards left
 def check_winner(player_cards):
     if len(player_cards) == 0:
         return True
     else:
         return False
+    
+# Check if the player has the card and if it is valid
+def player_turn(player_cards, card_to_play, top_card):
+    if card_to_play not in player_cards: # Check if the card is in the player's hand
+        print("Card is not in your hand!")
+        return top_card, False
+ # Check if the card can be played
+    if not is_valid_play(card_to_play, top_card):
+        print("Invalid play!")
+        return top_card, False
+ # Play the card and update the top card
+    top_card = play_card(card_to_play, top_card)
+# Remove the played card from the player's hand
+    player_cards.remove(card_to_play)
+    print("Cards left:", len(player_cards))
+# If the player still has cards, the game continues
+    if check_winner(player_cards):
+        print("Player wins")
+        return top_card, True
+
+    print("Game continues")
+    return top_card, False
+
