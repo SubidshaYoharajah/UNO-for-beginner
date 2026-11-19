@@ -48,13 +48,11 @@ def player_turn(player_cards, card_to_play, top_card, player_name="Human"):
     player_cards.remove(card_to_play)
     print("Cards left:", len(player_cards))
 
-# Check if the player has won
+    # Check if the player has won
     if check_winner(player_cards):
         print(f"{player_name} wins!")
-
-    # Add one win to the statistics
-    game_statistics.update_statistics(player_name)
-    return top_card, True
+        game_statistics.update_statistics(player_name)
+        return top_card, True
 
     print("Game continues")
     return top_card, False
