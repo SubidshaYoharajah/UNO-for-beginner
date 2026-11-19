@@ -17,3 +17,16 @@ def load_statistics():
 def save_statistics(stats):
     with open(STATS_FILE, "w") as file:
         json.dump(stats, file, indent=4)
+
+# Add one win to the winner
+def update_statistics(winner):
+    # Load the current statistics
+    stats = load_statistics()
+
+    # Check if the winner is valid
+    if winner == "Human" or winner == "Computer":
+        # Add one win
+        stats[winner] += 1
+
+        # Save the upadated statistics
+        save_statistics(stats)
