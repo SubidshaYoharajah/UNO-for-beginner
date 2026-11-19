@@ -30,3 +30,13 @@ def update_statistics(winner):
 
         # Save the upadated statistics
         save_statistics(stats)
+
+# Show the game statistics
+def show_statistics():
+    # Load the current statistics
+    stats = load_statistics()
+
+    # Display the statistics
+    print("Game Statistics")
+    print("Human wins:", stats["Human"])
+    print("Computer wins:", stats["Human"])
