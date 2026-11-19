@@ -20,11 +20,11 @@ The UNO game allows all players to play against the computer whenever they want.
 3. The deck contains number cards from 0 to 9, Block (Skip) cards, +2 cards and colour-change (Wild) cards. Reverse and +4 cards are excluded to keep the game simple.
 4. Each player receives seven cards at the beginning of the game.
 5. A player can play a card if its colour or its number matches the top card on the discard pile.
-6. A player can play a card if its symbol matches the symbol of the top card on the discard pile. Action symbols include Skip, Draw Two (+2)
+6. A player can play an Action card if its symbol matches the symbol of the top card on the discard pile. Action symbols are Skip and Draw Two (+2). A +2 card can only be played after the previous +2 penalty has been completed. Wild cards follow Rule 7.
 7. When a player plays a Wild card, they must choose one of the four colours. The chosen colour becomes the active colour. The next player can only play a card that matches the chosen active colour or another Wild card. The card underneath the Wild card is ignored.
 8. Block cards skip the opponent's turn.
 9. The +2 cards make the opponent draw two cards and lose their turn.
-10. +2 and skip cards cannot be stacked.
+10. Stacking penalties is not allowed. When a +2 card is played, the next player must draw two cards and skip their turn. The player cannot play another +2 card to avoid or pass on the penalty. After the penalty is completed, another +2 card can be played on a later valid turn if it matches the colour or symbol of the top card on the discard pile. A Skip card cannot be played to avoid a Skip effect.
 11. If a player has no playable card, they draw one card. If it is playable, they have to play it immediately. If not, then the next turn goes to the other player.
 12. A player may only draw a card if he has no playable cards
 13. The computer randomly plays a valid card or draws one if it cannot play.
@@ -69,18 +69,14 @@ Acceptance criteria:
 As a player, I want to play a Action & Wild cards, so that I can use their special effects during the game
 
 Acceptance criteria:
-- The player can play a wild card from their hand regardless of the current colour.
-- The player have to choose one of the four colours.
-- The selected colour becomes the active colour for the next round.
-- The wild card will be removed from the players hand.
-- The computer player have to follow the selected colour unless they play another wild card
-- The player can play an Action card if ist colour matches the active colour.
-- The player can play an Action card if its symbol matches the active symbol.
-- A skip card skips the next players turn
-- When a player plays a + 2 card, the next player drwas two cards and loses their turn
-- A player cannot stack another + 2 card on a + 2 card.
-- Skip and + 2 cards cannot be stacked to avoid their effect.
-- 	When a Wild card is the top card on the discard pile, an action card (Skip or +2) is valid only if its colour matches the chosen active colour.
+- A player can play a Wild card regardless of the current colour.
+- When a Wild card is played, the player must choose one of the four colours. This becomes the active colour.
+- After a Wild card is played, the next player must follow the chosen colour or play another Wild card.
+- An Action card (Skip or +2) can be played if its colour matches the active colour or its symbol matches the symbol of the top card on the discard pile. After a Wild card, only the chosen colour can be matched.
+- A Skip card makes the next player lose their turn.
+- A +2 card makes the next player draw two cards and lose their turn.
+- A player cannot play another +2 card to avoid or transfer an unresolved +2 penalty. A Skip effect cannot be avoided by playing another Action card.
+- After a +2 penalty has been resolved, another +2 card can be played on a later valid turn if its colour or symbol matches the top card on the discard pile.
 
 ### US-05: Computer Player (Nicolas Schneider)
 As a player, I want the computer to play its turn automatically, so that I can play against the computer.
