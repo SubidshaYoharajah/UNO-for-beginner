@@ -39,4 +39,4 @@ def show_statistics():
     # Display the statistics
     print("Game Statistics")
     print("Human wins:", stats["Human"])
-    print("Computer wins:", stats["Human"])
+    print("Computer wins:", stats["Computer"])

@@ -1,5 +1,6 @@
 import cards
 import user_input
+import game_statistics
 
 def is_valid_play(card, top_card):
     if card["color"] == top_card["color"]:
@@ -46,10 +47,14 @@ def player_turn(player_cards, card_to_play, top_card, player_name="Human"):
 # Remove the played card from the player's hand
     player_cards.remove(card_to_play)
     print("Cards left:", len(player_cards))
-# If the player still has cards, the game continues
+
+# Check if the player has won
     if check_winner(player_cards):
         print(f"{player_name} wins!")
-        return top_card, True
+
+    # Add one win to the statistics
+    game_statistics.update_statistics(player_name)
+    return top_card, True
 
     print("Game continues")
     return top_card, False
