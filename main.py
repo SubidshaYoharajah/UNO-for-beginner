@@ -4,6 +4,17 @@ import save_load
 import computer
 import user_input
 import deck
+import game_statistics
+
+
+# Start the game
+print("Welcome to UNO!")
+
+# Player names
+player_name = "Human"
+computer_name = "Computer"
+
+print("Players:", player_name, "and", computer_name)
 
 def main():
     top_card = cards.one_green
