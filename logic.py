@@ -12,6 +12,14 @@ def is_valid_play(card, top_card):
     else:
         return False
 
+# US-04: Check if Skip card was played
+def is_skip_card(card):
+    return card["value"] == "Skip"
+
+# US-04: Check if +2 card was played
+def is_draw_two_card(card):
+    return card["value"] == "+2"
+
 def play_card(card_top_play, top_card):
     if is_valid_play(card_top_play, top_card):
         print(f"Playing card: {card_top_play['name']}")
