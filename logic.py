@@ -2,13 +2,25 @@ import cards
 import user_input
 import game_statistics
 
+# US-04: Check if a card can be played 
 def is_valid_play(card, top_card):
+
+    # 1. Check if the played card is a Wild card
+    if card["value"] == "Wild":
+        return True
+
+    # 2. Check if the top card is a Wild card
+    if top_card["value"] == "Wild":
+        return card["color"] == top_card["color"]
+
+    # 3. Check if the colors match
     if card["color"] == top_card["color"]:
         return True
+
+    # 4. Check if the numbers or symbols match
     elif card["value"] == top_card["value"]:
         return True
-    elif card["color"] == cards.colors[-1]:  # Wild card
-        return True
+
     else:
         return False
 
