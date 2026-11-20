@@ -45,6 +45,27 @@ def get_action_effect(card):
         skip_turn = True
     return draw_cards, skip_turn
 
+# US-04: Check if a card can be played during a +2 penalty
+def play_during_penalty(card, penalty_active):
+
+    # A player cannot play a card during a +2 penalty
+    if penalty_active:
+        return False
+
+    # No active penalty
+    else:
+        return True
+
+# US-04: Check if a card can be played
+def can_play_card(card, top_card, penalty_active):
+
+    # Check if a +2 penalty is active
+    if not play_during_penalty(card, penalty_active):
+        return False
+
+    # Check if the card matches the top card
+    return is_valid_play(card, top_card)
+
 
 # US-04: Play a card
 def play_card(card_top_play, top_card):
@@ -83,14 +104,16 @@ def check_winner(player_cards):
         return False
     
 # Check if the player has the card and if it is valid
-def player_turn(player_cards, card_to_play, top_card, player_name="Human"):
+def player_turn(player_cards, card_to_play, top_card, player_name="Human", penalty_active=False):
     if card_to_play not in player_cards: # Check if the card is in the player's hand
         print("Card is not in your hand!")
         return top_card, False
- # Check if the card can be played
-    if not is_valid_play(card_to_play, top_card):
-        print("Invalid play!")
+    
+ # Check card rules and +2 penalty
+    if not can_play_card(card_to_play, top_card, penalty_active):
+        print("Invalid play or active +2 penalty!")
         return top_card, False
+
  # Play the card and update the top card
     top_card = play_card(card_to_play, top_card)
 # Remove the played card from the player's hand
