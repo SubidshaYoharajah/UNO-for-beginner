@@ -20,15 +20,44 @@ def is_skip_card(card):
 def is_draw_two_card(card):
     return card["value"] == "+2"
 
+# US-04: Check what happens when an Action card is played
+def get_action_effect(card):
+    draw_cards = 0
+    skip_turn = False
+
+    if card["value"] == "+2":
+        draw_cards = 2
+        skip_turn = True
+
+    elif card["value"] == "Skip":
+        skip_turn = True
+    return draw_cards, skip_turn
+
+
+# US-04: Play a card
 def play_card(card_top_play, top_card):
+
+    # Check if the card is valid
     if is_valid_play(card_top_play, top_card):
         print(f"Playing card: {card_top_play['name']}")
-        if card_top_play["color"] == cards.colors[-1]:  # Wild card
+
+         # Check if the card is a Wild card
+        if card_top_play["color"] == cards.colors[-1]:
             print("Playing a wild card! You can choose any color.")
             chosen_color = user_input.choose_color()
-            card_top_play["color"] = chosen_color
-        return card_top_play  # Return the played card to update the top card
+
+            # Copy the Wild card to keep the original card unchanged
+            played_card = card_top_play.copy()
+
+            # Set the chosen color
+            played_card["color"] = chosen_color
+            return played_card
+
+        # Return the played card
+        return card_top_play
+
     else:
+         # Keep the old top card if the play is invalid
         print("Invalid play!")
         return top_card
 
