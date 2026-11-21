@@ -1,8 +1,11 @@
 import deck
 
 def show_hand(game):
-    for card in game["player_hand"]:
-        print(card["name"])
+    hand = game["player_hand"]
+    print("Your cards:")
+    for i in range(len(hand)):
+        print(f"{i + 1}: {hand[i]['name']}")
+
 
 
 def show_computer(game):
