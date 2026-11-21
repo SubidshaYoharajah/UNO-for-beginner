@@ -1,6 +1,7 @@
 import random
 import logic
 import cards
+import game_statistics
 
 def choose_computer_color(computer_hand):
     hand_colors = []
@@ -16,7 +17,7 @@ def choose_computer_color(computer_hand):
 
 
 def computer_turn(game):
-    if game.get("Winner") or game ["current_player"] != "computer":
+    if game.get("winner") or game ["current_player"] != "computer":
         return
 
     computer_hand = game["computer_hand"]
@@ -27,4 +28,14 @@ def computer_turn(game):
     for card in computer_hand:
         if logic.is_valid_play(card, top_card):
             playable_cards.append(card)
+
+    if len(playable_cards) == 0:
+        if len(game["deck"]) == 0:
+            print("Draw pile is empty")
+            game["current_player"] = "human"
+            return None
+
+        drawn_card = game["deck"].pop()
+        computer_hand.append(drawn_card)
+
 
