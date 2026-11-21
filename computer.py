@@ -1,7 +1,6 @@
 import random
 import logic
 import cards
-import deck
 
 def choose_computer_color(computer_hand):
     hand_colors = []
@@ -16,5 +15,16 @@ def choose_computer_color(computer_hand):
     return best_color
 
 
+def computer_turn(game):
+    if game.get("Winner") or game ["current_player"] != "computer":
+        return
 
+    computer_hand = game["computer_hand"]
+    top_card = game["discard_pile"][-1]
+
+    playable_cards = []
+
+    for card in computer_hand:
+        if logic.is_valid_play(card, top_card):
+            playable_cards.append(card)
 
