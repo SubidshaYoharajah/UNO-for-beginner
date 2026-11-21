@@ -12,6 +12,7 @@ def has_playable_card(hand, top_card):
 
 
 def draw_card(game):
+    deck.refill_deck(game)
     card = game["deck"].pop()
     game["player_hand"].append(card)
     print(f"You drew: {card['name']}")
