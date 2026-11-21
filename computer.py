@@ -47,4 +47,18 @@ def computer_turn(game):
             game["current_player"] = "human"
             return None
 
+    chosen_card = random.choice(playable_cards)
+
+    played_card = chosen_card.copy()
+
+    if skip_turn:
+        game["current_player"] = "computer"
+        print("Human skips their turn")
+    else:
+        game["current_player"] = "human"
+
+    return played_card
+
+
+
 
