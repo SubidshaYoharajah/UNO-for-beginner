@@ -5,6 +5,8 @@ import computer
 import user_input
 import deck
 import game_statistics
+import display 
+import human_turn 
 
 
 # Start the game
