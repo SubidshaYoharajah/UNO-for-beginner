@@ -12,7 +12,14 @@ def new_game():
         player_hand.append(deck.pop())
         computer_hand.append(deck.pop())
 
-    discard_pile = [deck.pop()]
+    
+    first_card = deck.pop()
+    while first_card["value"] == "Wild":
+        deck.insert(0, first_card)
+        first_card = deck.pop()
+    discard_pile = [first_card]
+
+
     current_player = "human"
 
     return {
