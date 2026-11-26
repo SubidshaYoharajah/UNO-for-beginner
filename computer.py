@@ -1,7 +1,6 @@
 import random
 import logic
 import cards
-import game_statistics
 
 def choose_computer_color(computer_hand):
     hand_colors = []
@@ -37,5 +36,28 @@ def computer_turn(game):
 
         drawn_card = game["deck"].pop()
         computer_hand.append(drawn_card)
+
+        print("Computer draws a card")
+
+        if logic.is_valid_play(drawn_card, top_card):
+            playable_cards.append(drawn_card)
+        else:
+            print("Computer cannot play")
+            game["current_player"] = "human"
+            return None
+
+    chosen_card = random.choice(playable_cards)
+
+    played_card = chosen_card.copy()
+
+    if skip_turn:
+        game["current_player"] = "computer"
+        print("Human skips their turn")
+    else:
+        game["current_player"] = "human"
+
+    return played_card
+
+
 
 
