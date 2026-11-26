@@ -35,6 +35,11 @@ def human_turn(game):
 
     if not has_playable_card(hand, top_card):
         print("You have no playable card. You draw one.")
+        deck.refill_deck(game)
+        if len(game["deck"]) == 0:
+            print("There are no cards left. Your turn is over.")
+            return
+        
         card = draw_card(game)
         if logic.is_valid_play(card, top_card):
             print("The drawn card can be played. It is played now.")
