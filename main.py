@@ -20,7 +20,7 @@ print("Players:", player_name, "and", computer_name)
 
 def main():
     game = deck.new_game()
-    human_turn.human_turn(game)
+   
 
 while True:
     # repeat the turns again until the game ends
@@ -36,4 +36,3 @@ else:
 
 if __name__ == "__main__":
     main()
-    
