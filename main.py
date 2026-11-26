@@ -22,6 +22,18 @@ def main():
     game = deck.new_game()
     human_turn.human_turn(game)
 
+while True:
+    # repeat the turns again until the game ends
+    if game["current_player"] == "human":     
+        human_turn.human_turn(game)
+        game["current_player"] = "computer"
+
+
+else: 
+    print("Computers turn(coming soon)")
+    game["current_player"] = "human"
+
+
 if __name__ == "__main__":
     main()
     
