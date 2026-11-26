@@ -32,6 +32,8 @@ def human_turn(game):
 
     display.show_top_card(game)
     display.show_hand(game)
+    display.show_computer(game)
+    
 
     if not has_playable_card(hand, top_card):
         print("You have no playable card. You draw one.")
@@ -46,6 +48,8 @@ def human_turn(game):
             play(game, card)
         else:
             print("The drawn card cannot be played. Your turn is over.")
+            display.show_hand(game)
+        
         return
 
     while True:
