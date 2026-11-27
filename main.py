@@ -35,7 +35,6 @@ computer_name = "Computer"
 # Start a new game
 def start_game():
     print("Players:", player_name, "and", computer_name)
-
     game = deck.new_game()
 
     while True:
@@ -53,24 +52,26 @@ def start_game():
                 game_statistics.update_statistics("Human")
                 break
 
-            # Check if a Skip card was played
-            if played_card is not None and logic.is_skip_card(played_card):
+            # Default action effects
+            draw_count = 0
+            skip_turn = False
+
+            # Get the effect of the played card
+            if played_card is not None:
+                draw_count, skip_turn = logic.get_action_effect(played_card)
+
+            # Apply the draw effect
+            for i in range(draw_count):
+                deck.refill_deck(game)
+                if len(game["deck"]) == 0:
+                    break
+                drawn_card = game["deck"].pop()
+                game["computer_hand"].append(drawn_card)
+                print("Computer draws a card")
+
+            # Check if the computer skips its turn
+            if skip_turn:
                 print("Computer skips their turn")
-
-            # Check if a +2 card was played
-            elif played_card is not None and logic.is_draw_two_card(played_card):
-                for i in range(2):
-                    deck.refill_deck(game)
-
-                    if len(game["deck"]) == 0:
-                        break
-
-                    drawn_card = game["deck"].pop()
-                    game["computer_hand"].append(drawn_card)
-                    print("Computer draws a card")
-
-                print("Computer skips their turn")
-
             else:
                 game["current_player"] = "computer"
 
@@ -80,6 +81,7 @@ def start_game():
 
     # Show the winner
     print(game["winner"], "wins!")
+
 
 
 
