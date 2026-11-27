@@ -39,14 +39,18 @@ def start_game():
     game = deck.new_game()
 
     while True:
-        # repeat the turns again until the game ends
+        # Stop the game if a winner is detected
+        if game.get("winner"):
+            break
+
+        # Human turn
         if game["current_player"] == "human":
             human_turn.human_turn(game)
             game["current_player"] = "computer"
-        else:
-            print("Computers turn(coming soon)")
-            game["current_player"] = "human"
 
+        # Computer turn
+        else:
+            computer.computer_turn(game)
 
 def main():
     welcome()
