@@ -83,8 +83,6 @@ def start_game():
 
 
 
-
-
 def main():
     welcome()
 
@@ -95,6 +93,9 @@ def main():
         if choice == "1":
             start_game()
 
+        elif choice == "2":
+            print("Load game is not available yet.")
+
         elif choice == "3":
             game_statistics.show_statistics()
 
@@ -104,7 +105,7 @@ def main():
             break
 
         else:
-            print("Option not available yet.")
+            print("Invalid choice. Please enter a number from 1 to 4.")
 
 
 if __name__ == "__main__":
