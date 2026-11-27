@@ -1,6 +1,8 @@
 import random
 import logic
 import cards
+import deck
+import game_statistics
 
 def choose_computer_color(computer_hand):
     hand_colors = []
@@ -30,6 +32,8 @@ def computer_turn(game):
 
     if len(playable_cards) == 0:
         if len(game["deck"]) == 0:
+            deck.refill_deck(game)
+        if len(game["deck"]) == 0:
             print("Draw pile is empty")
             game["current_player"] = "human"
             return None
@@ -47,11 +51,28 @@ def computer_turn(game):
             return None
 
     chosen_card = random.choice(playable_cards)
-
+    computer_hand.remove(chosen_card)
     played_card = chosen_card.copy()
 
+    if played_card["value"] == "Wild":
+        played_card["color"] = choose_computer_color(computer_hand)
+
+    game["discard_pile"].append(played_card)
+    print(f"Computer plays {played_card['name']}")
+
+    if logic.check_winner(computer_hand):
+        game["winner"] = "Computer"
+        game_statistics.update_statistics("Computer")
+        return played_card
+
+    draw_count, skip_turn = logic.get_action_effect(played_card)
+    for _ in range(draw_count):
+        deck.refill_deck(game)
+        if not game["deck"]:
+            break
+        game["player_hand"].append(game["deck"].pop())
+
     if skip_turn:
-        game["current_player"] = "computer"
         print("Human skips their turn")
     else:
         game["current_player"] = "human"
