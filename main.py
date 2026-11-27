@@ -31,16 +31,9 @@ player_name = "Human"
 computer_name = "Computer"
 
 
-def main():
-    welcome()
-    choice = main_menu()
 
-        # Exit the game
-    if choice == "4":
-        print("\nThank you for playing UNO.")
-        print("Goodbye!")
-        return
-
+# Start a new game
+def start_game():
     print("Players:", player_name, "and", computer_name)
 
     game = deck.new_game()
@@ -55,6 +48,23 @@ def main():
             game["current_player"] = "human"
 
 
+def main():
+    welcome()
+    choice = main_menu()
+
+    if choice == "1":
+        start_game()
+
+    elif choice == "4":
+        print("\nThank you for playing UNO.")
+        print("Goodbye!")
+        return
+
+    else:
+        print("Option not available yet.")
+
+
 if __name__ == "__main__":
     main()
+
 
