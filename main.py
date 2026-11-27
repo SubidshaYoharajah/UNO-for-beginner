@@ -32,6 +32,7 @@ computer_name = "Computer"
 
 
 
+
 # Start a new game
 def start_game():
     print("Players:", player_name, "and", computer_name)
@@ -45,12 +46,18 @@ def start_game():
 
         # Human turn
         if game["current_player"] == "human":
-            human_turn.human_turn(game)
-            game["current_player"] = "computer"
+            played_card = human_turn.human_turn(game)
+
+            # Check if a Skip card was played
+            if played_card is not None and logic.is_skip_card(played_card):
+                print("Computer skips their turn")
+            else:
+                game["current_player"] = "computer"
 
         # Computer turn
         else:
             computer.computer_turn(game)
+
 
 def main():
     welcome()

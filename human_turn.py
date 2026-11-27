@@ -46,6 +46,7 @@ def human_turn(game):
         if logic.is_valid_play(card, top_card):
             print("The drawn card can be played. It is played now.")
             play(game, card)
+            return card
         else:
             print("The drawn card cannot be played. Your turn is over.")
             display.show_hand(game)
@@ -57,7 +58,7 @@ def human_turn(game):
         card = hand[number - 1]
         if logic.is_valid_play(card, top_card):
             play(game, card)
-            return
+            return card
         print("You cannot play this card. Choose another one.")
 
 
