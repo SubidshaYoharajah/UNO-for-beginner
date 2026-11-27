@@ -87,24 +87,28 @@ def start_game():
 
 def main():
     welcome()
-    choice = main_menu()
 
-    if choice == "1":
-        start_game()
+    # Repeat the main menu
+    while True:
+        choice = main_menu()
 
-    elif choice == "3":
-        game_statistics.show_statistics()
+        if choice == "1":
+            start_game()
 
-    elif choice == "4":
-        print("\nThank you for playing UNO.")
-        print("Goodbye!")
-        return
+        elif choice == "3":
+            game_statistics.show_statistics()
 
-    else:
-        print("Option not available yet.")
+        elif choice == "4":
+            print("\nThank you for playing UNO.")
+            print("Goodbye!")
+            break
+
+        else:
+            print("Option not available yet.")
 
 
 if __name__ == "__main__":
     main()
+
 
 
