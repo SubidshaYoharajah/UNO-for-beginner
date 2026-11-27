@@ -34,7 +34,13 @@ computer_name = "Computer"
 def main():
     welcome()
     choice = main_menu()
-    
+
+        # Exit the game
+    if choice == "4":
+        print("\nThank you for playing UNO.")
+        print("Goodbye!")
+        return
+
     print("Players:", player_name, "and", computer_name)
 
     game = deck.new_game()
