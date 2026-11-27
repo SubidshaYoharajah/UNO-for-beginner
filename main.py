@@ -16,6 +16,15 @@ def welcome():
     print("       WELCOME TO UNO!")
     print("================================")
 
+# Main menu
+def main_menu():
+    print("\n1. Start new game")
+    print("2. Load game")
+    print("3. View statistics")
+    print("4. Exit")
+
+    choice = input("Your choice: ")
+    return choice
 
 # Player names
 player_name = "Human"
@@ -24,6 +33,8 @@ computer_name = "Computer"
 
 def main():
     welcome()
+    choice = main_menu()
+    
     print("Players:", player_name, "and", computer_name)
 
     game = deck.new_game()
