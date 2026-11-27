@@ -92,6 +92,9 @@ def main():
     if choice == "1":
         start_game()
 
+    elif choice == "3":
+        game_statistics.show_statistics()
+
     elif choice == "4":
         print("\nThank you for playing UNO.")
         print("Goodbye!")
